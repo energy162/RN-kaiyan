@@ -33,7 +33,7 @@ export function cutstr(str, len) {
         }
         str_cut = str_cut.concat(a);
         if (str_length >= len) {
-            str_cut = str_cut.concat("...");
+            str_cut = str_cut.concat("…");
             return str_cut;
         }
     }

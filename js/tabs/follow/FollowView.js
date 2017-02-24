@@ -101,4 +101,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = connect()(FollowView);
+module.exports = FollowView;

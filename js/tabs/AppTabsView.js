@@ -9,6 +9,7 @@ import { switchTab } from '../actions';
 import MainView from './selected/MainView';
 import DiscoveryView from './discovery/DiscoveryView';
 import FollowView from './follow/FollowView';
+import ProfileView from './profile/ProfileView';
 
 class AppTabsView extends Component {
   render() {
@@ -54,6 +55,9 @@ class AppTabsView extends Component {
           selectedIcon={require('./profile/img/ic_tab_strip_icon_pgc_selected.png')}
           onPress={this.onTabSelect.bind(this, 'profile')}
           title='我的'>
+          <ProfileView
+            navigator={this.props.navigator}
+          />
         </TabBar.Item>
       </TabBar>
     );
