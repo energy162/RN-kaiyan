@@ -75,7 +75,7 @@ var styles = StyleSheet.create({
     position:'absolute',
     height:24,
     width:50,
-    right:10,
+    right:16,
     top:20,
     borderRadius: 4,
     borderColor: 'rgb(133,133,133)',

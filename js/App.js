@@ -8,7 +8,7 @@ import {
 
 import { connect } from 'react-redux';
 
-import { loadConfig, loadDiscovery } from './actions';
+import { loadConfig, loadDiscovery, loadFollow } from './actions';
 
 import AppNavigator from './AppNavigator';
 
@@ -21,6 +21,7 @@ class App extends Component {
   componentDidMount() {
     this.props.dispatch(loadConfig());
     this.props.dispatch(loadDiscovery());
+    this.props.dispatch(loadFollow());
   }
 
   render() {

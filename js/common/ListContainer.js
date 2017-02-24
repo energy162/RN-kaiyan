@@ -87,7 +87,7 @@ class ListContainer extends Component {
     }
     return (
       <Image
-        source={require('../tabs/main/img/home_page_header_icon.png')}
+        source={require('../tabs/selected/img/home_page_header_icon.png')}
         style={{width: 140, height: 140}}
       />
     );

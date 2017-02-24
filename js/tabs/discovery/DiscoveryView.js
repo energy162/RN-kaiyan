@@ -16,7 +16,7 @@ import DiscoverListView from './DiscoverListView';
 
 import { loadCategory } from '../../actions';
 
-class DiscoverView extends Component {
+class DiscoveryView extends Component {
   constructor(props) {
     super(props);
 
@@ -171,4 +171,4 @@ function select(store) {
   };
 }
 
-module.exports = connect(select)(DiscoverView);
+module.exports = connect(select)(DiscoveryView);

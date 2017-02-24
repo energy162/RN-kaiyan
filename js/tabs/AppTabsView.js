@@ -6,9 +6,9 @@ import { connect } from 'react-redux';
 import TabBar from 'react-native-xtabbar';
 import { switchTab } from '../actions';
 
-import MainView from './main/MainView';
-import SubscriptionView from './subscription/SubscriptionView';
-import DiscoverView from './discover/DiscoverView';
+import MainView from './selected/MainView';
+import DiscoveryView from './discovery/DiscoveryView';
+import FollowView from './follow/FollowView';
 
 class AppTabsView extends Component {
   render() {
@@ -20,9 +20,9 @@ class AppTabsView extends Component {
         navTextColorSelected={'black'}
         onItemSelected={(index) => {}}>
         <TabBar.Item
-          icon={require('./main/img/ic_tab_strip_icon_feed.png')}
-          selectedIcon={require('./main/img/ic_tab_strip_icon_feed_selected.png')}
-          onPress={this.onTabSelect.bind(this, 'main')}
+          icon={require('./selected/img/ic_tab_strip_icon_feed.png')}
+          selectedIcon={require('./selected/img/ic_tab_strip_icon_feed_selected.png')}
+          onPress={this.onTabSelect.bind(this, 'selected')}
           title='精选'>
           <MainView
             navigator={this.props.navigator}
@@ -30,21 +30,21 @@ class AppTabsView extends Component {
         </TabBar.Item>
 
         <TabBar.Item
-          icon={require('./discover/img/ic_tab_strip_icon_category.png')}
-          selectedIcon={require('./discover/img/ic_tab_strip_icon_category_selected.png')}
-          onPress={this.onTabSelect.bind(this, 'discover')}
+          icon={require('./discovery/img/ic_tab_strip_icon_category.png')}
+          selectedIcon={require('./discovery/img/ic_tab_strip_icon_category_selected.png')}
+          onPress={this.onTabSelect.bind(this, 'discovery')}
           title='发现'>
-          <DiscoverView
+          <DiscoveryView
             navigator={this.props.navigator}
           />
         </TabBar.Item>
 
         <TabBar.Item
-          icon={require('./subscription/img/ic_tab_strip_icon_follow.png')}
-          selectedIcon={require('./subscription/img/ic_tab_strip_icon_follow_selected.png')}
+          icon={require('./follow/img/ic_tab_strip_icon_follow.png')}
+          selectedIcon={require('./follow/img/ic_tab_strip_icon_follow_selected.png')}
           onPress={this.onTabSelect.bind(this, 'follow')}
           title='关注'>
-          <SubscriptionView
+          <FollowView
             navigator={this.props.navigator}
           />
         </TabBar.Item>
